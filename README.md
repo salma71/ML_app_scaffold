@@ -22,11 +22,11 @@ You should see:
 ## Few things to consider
 
 I structured the scaffold based on the OOP which seperate concerns of code. 
-`processing` folder conatains any scripts for data wrangeling, cleaning, or feature engineering. 
-`trained_model` folder contains any scripts dedicated to build model, tuning or any related scripts.
-`pipeline.py` file contains all the procedures that should be done using the `sklearn.pipeline` 
-`predict.py` file dedicated for getting out the predictions
-`train_pipeline.py` file dedicated to train the model, starting from downloading the dataset, split, apply pipeline...etc. 
+* `processing` folder conatains any scripts for data wrangeling, cleaning, or feature engineering. 
+* `trained_model` folder contains any scripts dedicated to build model, tuning or any related scripts.
+* `pipeline.py` file contains all the procedures that should be done using the `sklearn.pipeline` 
+* `predict.py` file dedicated for getting out the predictions
+* `train_pipeline.py` file dedicated to train the model, starting from downloading the dataset, split, apply pipeline...etc. 
 
 You are free to just delete them and put all your scripts in just one file - personal preferences. 
 
