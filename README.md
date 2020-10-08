@@ -18,6 +18,8 @@ You should see:
 
 9. You can add tests in the test folder in the dedicated package. However, you need to add the dependency in the `tox.ini` and `requirements.txt` files. for more details check out [tox documentation](https://tox.readthedocs.io/en/latest/examples.html)
 
+** Please note that the `train_pipeline` is commented out until you download the dataset, fill the config file with the correct variables.** Otherwise, the `tox` command would fail because there are no variables to train. 
+
 ------
 
 ## Few things to consider
