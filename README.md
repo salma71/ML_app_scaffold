@@ -7,15 +7,16 @@ This folder is a template scaffold for those who are not familiar with software 
 1. Clone the repo or fork it to your account, then navigate to the project folder `cd ML_app_scaffold`
 2. Activate the virtualenv `dev` by running this command in the terminal `source dev/bin/activate`
 3. Change `sub_pckage_1` to your package name
-4. Add your information to the `setup.py` file
-5. Add train and test data to the datasets folder inside the package folder
-6. Update the `MANIFEET.in` file to your package name
-7. Navigate to the sub_package_1 folder then run `tox -r` to build the package
+4. install all dependencies `pip install -rrequirements.txt`
+5. Add your information to the `setup.py` file
+6. Add train and test data to the datasets folder inside the package folder
+7. Update the `MANIFEET.in` file to your package name
+8. Navigate to the sub_package_1 folder then run `tox -r` to build the package
 
 You should see:
  **commands succeeded congratulations :)**
 
-8. You can add tests in the test folder in the dedicated package. However, you need to add the dependency in the `tox.ini` and `requirements.txt` files. for more details check out [tox documentation](https://tox.readthedocs.io/en/latest/examples.html)
+9. You can add tests in the test folder in the dedicated package. However, you need to add the dependency in the `tox.ini` and `requirements.txt` files. for more details check out [tox documentation](https://tox.readthedocs.io/en/latest/examples.html)
 
 ------
 
