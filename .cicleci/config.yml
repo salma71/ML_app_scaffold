@@ -1,0 +1,39 @@
+version: 2
+jobs:
+  test_sub_package_1:
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run:
+          name: Runnning tests
+          command: |
+            virtualenv venv
+            . venv/bin/activate
+            pip install --upgrade pip
+            pip install -r packages/sub_package_1/requirements.txt
+            chmod +x ./scripts/fetch_kaggle_dataset.sh
+            ./scripts/fetch_kaggle_dataset.sh
+  train_and_upload_sub_package_1:
+    working_directory: ~/project
+    steps:
+      - checkout
+      - run: 
+          name: Setup env
+          command: |
+            virtualenv venv
+            . venv/bin/activate
+            pip install -r packages/sub_package_1/requirements.txt
+      - run: 
+          name: Publish model
+          command: |
+            . venv/bin/activate
+            chmod +x ./scripts/fetch_kaggle_dataset.sh ./scripts/publish_model.sh
+            ./scripts/fetch_kaggle_dataset.sh
+            PYTHONPATH=./packages/sub_package_1 python3 packages/sub_package_1/sub_package_1/train_pipeline.py
+            ./scripts/publish_model.sh ./packages/sub_package_1/
+workflows:
+  version: 2
+  test-all:
+    jobs:
+      - test_sub_package_1
+      - train_and_upload_sub_package_1
